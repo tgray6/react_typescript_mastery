@@ -1,28 +1,25 @@
 import React from 'react';
 import './App.css';
 
-function MyMessage(props: { message: string }) {
+interface NewType {
+  message: string;
+};
+
+function MyMessage(props: NewType) {
   return <div>{props.message}</div>;
-}
+};
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          <MyMessage message = {"Chapter 4"}></MyMessage>
+          <MyMessage message = {"Chapter 4"}/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React
-        </a>
       </header>
     </div>
   );
-}
+};
 
 export default App;
 
